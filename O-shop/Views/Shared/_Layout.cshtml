@@ -1,0 +1,43 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - O_shop</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"  asp-append-version="true"/>
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+</head>
+<body>
+    <header>
+        <div class="inner-width">
+            <h1>My shop</h1>
+            <div class="menu-icon">
+                <i class="fas fa-bars" aria-hidden="true"></i>
+            </div>
+        </div>
+    </header>
+    <div class="navigation-menu">
+        <div>
+                  <li><a href="#">Home</a></li>
+                  <li><a href="#">About</a></li>
+                  <li><a href="#">Store</a></li>
+                  <li><a href="#">Contacts</a></li>
+                  <li><a href="#">Privacy</a></li>
+        </div>
+    </div>
+    <script>
+$(".menu-icon").click(function() {
+    $(this).toggleClass("active");
+    $(".navigation-menu").toggleClass("active");
+    $(".menu-icon i").toggleClass("fa-times")
+})
+    </script>
+    <div class="container">
+        <main role="main" class="pb-3">
+            @RenderBody()
+        </main>
+    </div>
+
+</body>
+</html>
